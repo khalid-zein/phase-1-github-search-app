@@ -42,7 +42,7 @@ form.addEventListener("submit", users)
 const displayRepos = function(user){
 
     fetch(`https://api.github.com/users/${user}/repos`).then(res => res.json()).then(data => {
-console.log(data);
+        console.log(data);
         data.map(repo=>{
             const markup = `<li><a href="${repo.html_url}">${repo.full_name}</a></li>`
             userList.innerHTML = ""
